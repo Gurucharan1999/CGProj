@@ -11,6 +11,9 @@ class Ellipse_
 	vec2<int> C, P;
 	float A;
 public:
-	Ellipse_(int x = 0, int y = 0, int a = 100, int b = 50, int th = 0) :C(vec2<int>(x, y)), P(vec2<int>(a, b)), A(th) {}
+	Ellipse_(int x = 0, int y = 0, int a = 100, int b = 50, float th = 0) :C(vec2<int>(x, y)), P(vec2<int>(a, b)), A(th) {}
 	void draw();
 };
+
+template <typename T> extern mat2<T> translator(T x, T y);
+template <typename T> extern mat2<T> rotator(T t);

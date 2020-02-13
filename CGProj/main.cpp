@@ -4,10 +4,8 @@
 #include <iostream>
 
 #include "Ellipse_.h"
-#include "mat2.h"
-#include "vec2.h"
 
-#define		TO_RAD(x)	(float)x*3.14/180
+float t;
 
 using namespace std;
 
@@ -95,7 +93,7 @@ void changeViewPort(int w, int h)
 void render()
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	Ellipse_ E(100, 100, 80, 50, 45);
+	Ellipse_ E(250, 250, 200, 100, t);
 	E.draw();
 	glutSwapBuffers();
 }
@@ -104,6 +102,15 @@ void init()
 {
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	gluOrtho2D(0, 500, 0, 500);
+	t = 0;
+}
+
+void update(int val)
+{
+	t += 1;
+	if (t > 360) t -= 360;
+	glutPostRedisplay();
+	glutTimerFunc(10, update, 0);
 }
 
 int main(int argc, char* argv[]) {
@@ -121,7 +128,7 @@ int main(int argc, char* argv[]) {
 	init();
 	glutReshapeFunc(changeViewPort);
 	glutDisplayFunc(render);
-
+	
 	// Very important!  This initializes the entry points in the OpenGL driver so we can 
 	// call all the functions in the API.
 	GLenum err = glewInit();
@@ -130,7 +137,7 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-
+	glutTimerFunc(10, update, 0);
 	glutMainLoop();
 	return 0;
 }

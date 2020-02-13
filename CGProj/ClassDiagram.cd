@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Circle_">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAQA=</HashCode>
+      <FileName>Circle_.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ellipse_">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAEAAAAAAAAAAAAoABAAAA=</HashCode>
+      <FileName>Ellipse_.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="mat2&lt;T&gt;">
+    <Position X="1.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAgAgAAAAAAA=</HashCode>
+      <FileName>mat2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="vec2&lt;T&gt;">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>vec2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
